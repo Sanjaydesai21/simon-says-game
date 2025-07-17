@@ -6,13 +6,6 @@ let lev = 0;
 
 let btns = ["red", "blue", "green", "yellow"];
 let level = document.querySelector("#level");
-document.addEventListener("keypress", () => {
-  if (started == false) {
-    console.log("game is started");
-    started == true;
-    levelup();
-  }
-});
 
 function checkAns(idx) {
   //   console.log(current level ${lev});
@@ -63,6 +56,15 @@ function btnPress() {
   //   console.log(this);
   let btn = this;
   let userColor = btn.getAttribute("id");
+  if (!started) {
+    started = true;
+    gameSeq.push(userColor);
+    userSeq = [];
+    lev = 1;
+    level.innerText = `Level ${lev}`;
+    gameFlash(btn);
+    return;
+  }
   userSeq.push(userColor);
   // console.log(`User seq ${userSeq}`);
   userFlash(btn);
