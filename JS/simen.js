@@ -6,10 +6,10 @@ let lev = 0;
 
 let btns = ["red", "blue", "green", "yellow"];
 let level = document.querySelector("#level");
-
-document.addEventListener("keypress", () => {
+let div = document.querySelector(".btn");
+div.addEventListener("click", () => {
   if (started == false) {
-    console.log("game is started");
+    // console.log("game is started");
     started == true;
     levelup();
   }
@@ -43,7 +43,7 @@ function levelup() {
   let randBtn = document.querySelector(`.${randColor}`);
 
   gameSeq.push(randColor);
-  console.log(`Game seq ${gameSeq}`);
+  // console.log(`Game seq ${gameSeq}`);
   gameFlash(randBtn);
 }
 function gameFlash(btn) {
@@ -65,7 +65,7 @@ function btnPress() {
   let btn = this;
   let userColor = btn.getAttribute("id");
   userSeq.push(userColor);
-  console.log(`User seq ${userSeq}`);
+  // console.log(`User seq ${userSeq}`);
   userFlash(btn);
 
   checkAns(userSeq.length - 1);
