@@ -6,10 +6,9 @@ let lev = 0;
 
 let btns = ["red", "blue", "green", "yellow"];
 let level = document.querySelector("#level");
-let div = document.querySelector(".btn");
-div.addEventListener("click", () => {
+document.addEventListener("click", () => {
   if (started == false) {
-    // console.log("game is started");
+    console.log("game is started");
     started == true;
     levelup();
   }
