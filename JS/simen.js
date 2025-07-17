@@ -6,7 +6,7 @@ let lev = 0;
 
 let btns = ["red", "blue", "green", "yellow"];
 let level = document.querySelector("#level");
-document.addEventListener("click", () => {
+document.addEventListener("keypress", () => {
   if (started == false) {
     console.log("game is started");
     started == true;
