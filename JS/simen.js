@@ -20,7 +20,7 @@ function checkAns(idx) {
     document.querySelector("body").style.backgroundColor = "red";
     setTimeout(() => {
       document.querySelector("body").style.backgroundColor = "white";
-    }, 2000);
+    }, 3000);
     reset();
   }
 }
